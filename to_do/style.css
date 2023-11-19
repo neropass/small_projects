@@ -90,4 +90,7 @@ body {
   border: none;
   cursor: pointer;
   outline: none;
+}
+.container #tasks .completed {
+  text-decoration: line-through;
 }/*# sourceMappingURL=style.css.map */

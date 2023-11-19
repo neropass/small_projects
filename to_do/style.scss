@@ -78,6 +78,7 @@ body {
       justify-content: space-between;
       border-bottom: 2px solid #d1d3d4;
       cursor: pointer;
+
       span {
         font-family: $poppins;
         font-size: 1rem;
@@ -94,6 +95,12 @@ body {
         cursor: pointer;
         outline: none;
       }
+      
+    }
+    .completed {
+      text-decoration: line-through;
     }
   }
 }
+
+
