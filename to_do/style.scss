@@ -1,6 +1,8 @@
-$poppins : 'Poppins', sans-serif;
+$poppins: 'Poppins', sans-serif;
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   padding: 0;
   margin: 0;
   block-size: border-box;
@@ -21,14 +23,13 @@ body {
   left: 50%;
   padding: 30px 40px;
   #newtask {
-
     position: relative;
     background-color: white;
     padding: 30px 20px;
     border-radius: 5px;
     box-shadow: 0 15px 30px rgba(0, 0, 0, $alpha: 0.3);
 
-    input{
+    input {
       width: 70%;
       height: 42px;
       font-family: $poppins;
@@ -59,14 +60,40 @@ body {
       cursor: pointer;
     }
   }
-  
+
   #tasks {
     background-color: white;
-    padding-top: 60px;
+    padding: 30px 20px;
     margin-top: 60px;
     border-radius: 5px;
     box-shadow: 0 15px 30px rgba(0, 0, 0, $alpha: 0.3);
-    width: 100%;
     position: relative;
+    .task {
+      background-color: white;
+      height: 40px;
+      padding: 5px 10px;
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 2px solid #d1d3d4;
+      cursor: pointer;
+      span {
+        font-family: $poppins;
+        font-size: 1rem;
+        font-weight: 400;
+
+      }
+      button {
+        background-color: #8052ec;
+        color: white;
+        height: 100%;
+        width: 40px;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        outline: none;
+      }
+    }
   }
 }
