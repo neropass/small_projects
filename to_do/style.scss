@@ -68,6 +68,7 @@ body {
     border-radius: 5px;
     box-shadow: 0 15px 30px rgba(0, 0, 0, $alpha: 0.3);
     position: relative;
+    transition: max-height 2s ease;
     .task {
       background-color: white;
       height: 40px;
@@ -78,7 +79,6 @@ body {
       justify-content: space-between;
       border-bottom: 2px solid #d1d3d4;
       cursor: pointer;
-
       span {
         font-family: $poppins;
         font-size: 1rem;

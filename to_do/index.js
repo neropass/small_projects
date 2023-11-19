@@ -33,6 +33,7 @@ document.querySelector('#push').onclick = function () {
       }
     }
 
+    // Clearing text field
     document.querySelector("#newtask input").value = "";
   }
 };
