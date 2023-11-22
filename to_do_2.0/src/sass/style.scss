@@ -1,0 +1,136 @@
+$greyish: #edeef0;
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #78c1f3;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  background-color: #fff;
+  padding: 25px;
+  width: 500px;
+  border-radius: 10px;
+}
+
+div {
+  user-select: none;
+}
+
+.todo-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  img {
+    height: 3rem;
+  }
+}
+.todo-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: $greyish;
+  border-radius: 30px;
+  padding-left: 20px;
+  margin-bottom: 20px;
+  input {
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 15px 0;
+    font-size: 20px;
+  }
+  img {
+    cursor: pointer;
+    height: 55px;
+    width: 55px;
+    padding: 15px;
+    background: limegreen;
+    border-radius: 50%;
+  }
+}
+
+ul li {
+  list-style: none;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 10px;
+}
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: $greyish;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.todo-controls {
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  margin-right: 5px;
+}
+
+h5 {
+  text-align: center;
+  margin-bottom: 10px;
+  color: green;
+}
+
+.toggleMe {
+  animation: hideMe 5s forwards;
+}
+
+li {
+  opacity: 0;
+  animation: new-item-animation 0.3s linear forwards;
+  
+}
+
+.deleted-item {
+  animation: removed-item-animation 1s cubic-bezier(0.55, -0.04, 0.91, 0.94) forwards;
+  transform-origin: 0% 100%;
+}
+
+@keyframes removed-item-animation {
+  0% {
+    opacity: 1;
+    transform: rotate(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(600px) rotate(90deg);
+  }
+
+}
+
+@keyframes new-item-animation {
+  from {
+    opacity: 0;
+    transform: translateY(-400px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hideMe {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
